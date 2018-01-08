@@ -1,0 +1,45 @@
+Kafka and Queues
+But mostly Kafka
+09:00 4 Jan 2018
+Tags: kafka,queue
+
+Brian Ketelsen
+bketelsen@gmail.com
+https://brianketelsen.com/
+@bketelsen
+
+* Quick Intro to Kafka
+
+Kafka is like a cross between a message queue and git.
+
+In the BEST possible way.
+
+* Pub/Sub
+
+Kafka does message queue publish/subscribe delivery much like you would expect from RabbitMQ, MSMQ, Google Pub/Sub, etc.
+
+Kafka supports "Consumer Groups", which are sets of consumers that will process a single topic.  Only one member of a Consumer Group will get a message.
+
+- high throughput
+- low-latency
+- partitioned
+- persistent!!
+
+* Stream Processing
+
+Consume from one topic, perform aggregation, produce to a new topic.
+
+- real-time stream processing
+- aggregation, augmentation, etc.
+
+[[https://movio.co/en/blog/Kasper-process-library/][kasper]]
+[[https://github.com/lovoo/goka][goka]]
+
+* Store
+
+Kafka is ALSO a distributed fault-tolerant data store.
+It won't replace your database, but Kafka is really good at being your system of record.
+
+- distributed - no SPOFs
+- fault-tolerant, actively protecting the cluster and your data
+- git for your data - see object X at version 12
